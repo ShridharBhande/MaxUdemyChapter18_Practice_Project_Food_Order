@@ -24,6 +24,7 @@ export function UserProgressContextProvider({ children }) {
   }
 
   function hideCheckout() {
+    console.log('--hide Checkout 11-->');
     setUserProgress('')
   }
 
@@ -34,6 +35,9 @@ export function UserProgressContextProvider({ children }) {
     showCheckout,
     hideCheckout
   }
+
+  console.log('--userProgressCtx-->', userProgressCtx);
+
 
   return (
     <UserProgressContext.Provider value={userProgressCtx}>{children}</UserProgressContext.Provider>
